@@ -1,4 +1,4 @@
-class tram {
+class station {
 	constructor(game,x,y){
 		this.game = game;
 		this.image = null;
@@ -11,10 +11,10 @@ class tram {
 	loadImage(){
 		this.image = new Image;
 
-		this.image.src = 'images/tramblue.png';
+		this.image.src = 'images/station.png';
 	}
 	update(){
-		if(this.x == this.game.oto.x ){
+		if(this.x == this.game.car.x ){
 			SPEED = 0;
 		}
 

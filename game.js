@@ -12,8 +12,8 @@ class game {
 		this.canvas.width = GAME_WIDTH;
 		this.canvas.height = GAME_HEIGHT;
 		document.body.appendChild(this.canvas);
-		this.oto = new oto(this);
-		this.array = new array(this,this.oto);
+		this.car = new car(this);
+		this.array = new array(this,this.car);
 		this.start = new start(this);
 		this.handles = new handles(this);
 	}
@@ -26,8 +26,8 @@ class game {
 
 	
 	update(){
-		this.context.clearRect(OTO_START_X, OTO_START_Y, 1000, 70);
-		this.oto.update();
+		this.context.clearRect(CAR_START_X, CAR_START_Y, 1000, 70);
+		this.car.update();
 		this.array.update();
 		this.handles.update();
 		
@@ -36,7 +36,7 @@ class game {
 	draw(){
 		this.start.draw();
 		this.array.draw();
-		this.oto.draw();
+		this.car.draw();
 		this.handles.draw();
 	}
 

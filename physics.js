@@ -1,5 +1,5 @@
 class physics {
-	collision(oto,tram){
+	collision(car,station){
 		
 	}
 }
