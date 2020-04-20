@@ -14,6 +14,8 @@ class handles {
 		document.addEventListener('keydown', (event) => {
 			console.log(event.code);
 			switch (event.code) {
+                case 'Space':
+                    this.game.car.start = true;
 				case 'Digit1':
                     if(this.game.car.x == this.game.array.stations[0].x){
                         //console.log('aaa');
@@ -58,7 +60,11 @@ class handles {
 		});
     }
     update(){
-       
+       if(this.game.car.x == this.game.array.stations[5].x){
+           this.game.canvas.style.display = 'none';
+           console.log('asc');
+       }
+       //this.game.canvas.style.display = 'block';
     }
     draw(){
         for(let i = 0; i<5; i++){
@@ -67,6 +73,7 @@ class handles {
             this.game.context.fillText(i+1,this.game.array.stations[i].x+20,this.game.array.stations[i].y+40);
         }
     }
+    
     }
 
 }
